@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move</title>
+</head>
+<body>
+<button id="RIGHT">RIGHT</button>
+<button id="LEFT">LEFT</button>
+<button id="UP">UP</button>
+<button id="DOWN">DOWN</button>
+<img src="Img/tennis-ball-isolated-on-white-260nw-82027615.webp" height="280" width="260" id="ball" alt="altIMG"/>
+<script>
+    var img = document.getElementById("ball");
+    img.style.position = "relative";
+    img.style.left = "0px";
+    img.style.top = "0px"
+    document.getElementById("RIGHT").addEventListener("click",function MoveRight()
+    {
+        img.style.left = parseInt(img.style.left) + 10 + "px";
+    });
+    document.getElementById("LEFT").addEventListener("click",function MoveLeft()
+    {
+        img.style.left = parseInt(img.style.left) - 10 + "px";
+    });
+    document.getElementById("UP").addEventListener("click",function MoveUp()
+    {
+        img.style.top = parseInt(img.style.top) - 10 + "px";
+    });
+    document.getElementById("DOWN").addEventListener("click",function MoveDown()
+    {
+        img.style.top = parseInt(img.style.top) + 10 + "px";
+    });
+
+</script>
+
+</body>
+</html>
